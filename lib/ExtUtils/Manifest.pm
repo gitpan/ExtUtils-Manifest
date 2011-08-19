@@ -13,7 +13,7 @@ use vars qw($VERSION @ISA @EXPORT_OK
           $Is_MacOS $Is_VMS $Is_VMS_mode $Is_VMS_lc $Is_VMS_nodot
           $Debug $Verbose $Quiet $MANIFEST $DEFAULT_MSKIP);
 
-$VERSION = '1.59';
+$VERSION = '1.60';
 @ISA=('Exporter');
 @EXPORT_OK = qw(mkmanifest
                 manicheck  filecheck  fullcheck  skipcheck
@@ -730,6 +730,7 @@ sub _fix_manifest {
     }
 
     if ( $must_rewrite ) {
+        1 while unlink $MANIFEST; # avoid multiple versions on VMS
         open MANIFEST, ">", $MANIFEST or die "(must_rewrite=$must_rewrite) Could not open >$MANIFEST: $!";
         for (my $i=0; $i<=$#manifest; $i+=2) {
             print MANIFEST "$manifest[$i]\n";
