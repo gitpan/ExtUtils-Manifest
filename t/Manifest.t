@@ -44,6 +44,7 @@ my %Files;
 sub add_file {
     my ($file, $data) = @_;
     $data ||= 'foo';
+    $file =~ s/ /^_/g if $Is_VMS; # escape spaces
     1 while unlink $file;  # or else we'll get multiple versions on VMS
     open( T, '> '.$file) or return;
     print T $data;
@@ -262,6 +263,7 @@ is( $files->{foobar}, '',    '          preserved old entries' );
                 pass "normalization success with i=$i";
             } else {
                 require Data::Dumper;
+                no warnings "once";
                 local $Data::Dumper::Useqq = 1;
                 local $Data::Dumper::Terse = 1;
                 is Data::Dumper::Dumper($maniaddresult), Data::Dumper::Dumper($prev_maniaddresult), "eol normalization failed with i=$i";
@@ -450,6 +452,7 @@ SKIP: {
 
 END {
 	is( unlink( keys %Files ), keys %Files, 'remove all added files' );
+	for my $file ( keys %Files ) { 1 while unlink $file; } # all versions
 	remove_dir( 'moretest', 'copy' );
 
 	# now get rid of the parent directory
