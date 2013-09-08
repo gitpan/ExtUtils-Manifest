@@ -22,7 +22,7 @@ resources:
   bugtracker: http://rt.perl.org/rt3/
   homepage: https://metacpan.org/release/ExtUtils-Manifest
   repository: git://github.com/rafl/extutils-manifest.git
-version: 1.62
+version: 1.63
 x_Dist_Zilla:
   perl:
     version: 5.018000
