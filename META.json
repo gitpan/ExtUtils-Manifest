@@ -38,17 +38,16 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "mailto" : "perlbug@perl.org",
-         "web" : "http://rt.perl.org/rt3/"
+         "web" : "http://github.com/Perl-Toolchain-Gang/ExtUtils-Manifest/issues"
       },
       "homepage" : "https://metacpan.org/release/ExtUtils-Manifest",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/Perl-Toolchain-Gang/extutils-manifest.git",
-         "web" : "http://github.com/Perl-Toolchain-Gang/extutils-manifest"
+         "url" : "git://github.com/Perl-Toolchain-Gang/Extutils-Manifest.git",
+         "web" : "http://github.com/Perl-Toolchain-Gang/Extutils-Manifest"
       }
    },
-   "version" : "1.65",
+   "version" : "1.66",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.020000"

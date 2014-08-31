@@ -20,10 +20,10 @@ requires:
   File::Spec: '0.8'
   perl: '5.006'
 resources:
-  bugtracker: http://rt.perl.org/rt3/
+  bugtracker: http://github.com/Perl-Toolchain-Gang/ExtUtils-Manifest/issues
   homepage: https://metacpan.org/release/ExtUtils-Manifest
-  repository: git://github.com/Perl-Toolchain-Gang/extutils-manifest.git
-version: '1.65'
+  repository: git://github.com/Perl-Toolchain-Gang/Extutils-Manifest.git
+version: '1.66'
 x_Dist_Zilla:
   perl:
     version: '5.020000'
