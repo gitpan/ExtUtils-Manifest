@@ -23,7 +23,7 @@ resources:
   bugtracker: http://github.com/Perl-Toolchain-Gang/ExtUtils-Manifest/issues
   homepage: https://metacpan.org/release/ExtUtils-Manifest
   repository: git://github.com/Perl-Toolchain-Gang/Extutils-Manifest.git
-version: '1.66'
+version: '1.68'
 x_Dist_Zilla:
   perl:
     version: '5.020000'
