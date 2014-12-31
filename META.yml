@@ -16,7 +16,7 @@ configure_requires:
   ExtUtils::MakeMaker: '0'
   perl: '5.006'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.025, CPAN::Meta::Converter version 2.142690'
+generated_by: 'Dist::Zilla version 5.029, CPAN::Meta::Converter version 2.143240'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,7 +25,7 @@ name: ExtUtils-Manifest
 provides:
   ExtUtils::Manifest:
     file: lib/ExtUtils/Manifest.pm
-    version: '1.69'
+    version: '1.70'
 requires:
   Carp: '0'
   Exporter: '0'
@@ -43,19 +43,19 @@ resources:
   bugtracker: http://github.com/Perl-Toolchain-Gang/ExtUtils-Manifest/issues
   homepage: https://metacpan.org/release/ExtUtils-Manifest
   repository: git://github.com/Perl-Toolchain-Gang/Extutils-Manifest.git
-version: '1.69'
+version: '1.70'
 x_Dist_Zilla:
   perl:
-    version: '5.021005'
+    version: '5.020001'
   plugins:
     -
       class: Dist::Zilla::Plugin::RewriteVersion
       name: RewriteVersion
-      version: '0.007'
+      version: '0.008'
     -
       class: Dist::Zilla::Plugin::PodVersion
       name: PodVersion
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::OnlyCorePrereqs
       config:
@@ -70,7 +70,7 @@ x_Dist_Zilla:
           skips: []
           starting_version: 'to be determined from perl prereq'
       name: OnlyCorePrereqs
-      version: '0.017'
+      version: '0.019'
     -
       class: Dist::Zilla::Plugin::DualLife
       name: DualLife
@@ -78,7 +78,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MetaResources
       name: MetaResources
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::PromptIfStale
       config:
@@ -89,7 +89,7 @@ x_Dist_Zilla:
           phase: release
           skip: []
       name: 'stale modules, release'
-      version: '0.030'
+      version: '0.032'
     -
       class: Dist::Zilla::Plugin::Git::GatherDir
       config:
@@ -108,27 +108,27 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: Git::GatherDir
-      version: '2.025'
+      version: '2.029'
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: MetaYAML
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::MetaJSON
       name: MetaJSON
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::License
       name: License
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Readme
       name: Readme
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Manifest
       name: Manifest
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::InstallGuide
       name: InstallGuide
@@ -153,7 +153,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MetaTests
       name: MetaTests
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Test::ChangesHasContent
       name: Test::ChangesHasContent
@@ -165,7 +165,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: PodSyntaxTests
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Test::Pod::No404s
       name: Test::Pod::No404s
@@ -185,7 +185,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: NextRelease
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::ReadmeAnyFromPod
       name: ReadmeAnyFromPod
@@ -204,17 +204,17 @@ x_Dist_Zilla:
             -
               class: Dist::Zilla::Plugin::FinderCode
               name: ':InstallModules'
-              version: '5.025'
+              version: '5.029'
         Dist::Zilla::Role::MetaProvider::Provider:
           inherit_missing: '1'
           inherit_version: '1'
           meta_noindex: '1'
       name: MetaProvides::Package
-      version: '2.001002'
+      version: '2.002000'
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: MetaConfig
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Git::Contributors
       config:
@@ -228,7 +228,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: AutoPrereqs
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Prereqs::AuthorDeps
       name: Prereqs::AuthorDeps
@@ -245,14 +245,14 @@ x_Dist_Zilla:
             - VMS::Feature
             - VMS::Filespec
       name: RemovePrereqs
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::MakeMaker
       config:
         Dist::Zilla::Role::TestRunner:
           default_jobs: 1
       name: MakeMaker
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::CheckSelfDependency
       config:
@@ -260,7 +260,7 @@ x_Dist_Zilla:
           finder:
             - ':InstallModules'
       name: CheckSelfDependency
-      version: '0.008'
+      version: '0.009'
     -
       class: Dist::Zilla::Plugin::CheckStrictVersion
       name: CheckStrictVersion
@@ -277,7 +277,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: Git::Check
-      version: '2.025'
+      version: '2.029'
     -
       class: Dist::Zilla::Plugin::Git::Remote::Check
       name: Git::Remote::Check
@@ -285,26 +285,30 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::CheckPrereqsIndexed
       name: CheckPrereqsIndexed
-      version: '0.012'
+      version: '0.013'
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: TestRelease
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::RunExtraTests
       config:
         Dist::Zilla::Role::TestRunner:
           default_jobs: 1
       name: RunExtraTests
-      version: '0.024'
+      version: '0.025'
     -
       class: Dist::Zilla::Plugin::CheckIssues
       name: CheckIssues
-      version: '0.004'
+      version: '0.007'
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
       name: UploadToCPAN
-      version: '5.025'
+      version: '5.029'
+    -
+      class: Dist::Zilla::Plugin::GitHub::Update
+      name: GitHub::Update
+      version: '0.39'
     -
       class: Dist::Zilla::Plugin::CopyFilesFromRelease
       config:
@@ -313,11 +317,7 @@ x_Dist_Zilla:
             - LICENSE
           match: []
       name: CopyFilesFromRelease
-      version: '0.003'
-    -
-      class: Dist::Zilla::Plugin::BumpVersionAfterRelease
-      name: BumpVersionAfterRelease
-      version: '0.007'
+      version: '0.004'
     -
       class: Dist::Zilla::Plugin::Git::Commit
       config:
@@ -328,33 +328,51 @@ x_Dist_Zilla:
           time_zone: local
         Dist::Zilla::Role::Git::DirtyFiles:
           allow_dirty:
-            - Changes
             - README.pod
             - LICENSE
+            - Changes
           allow_dirty_match: []
           changelog: Changes
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
-      name: Git::Commit
-      version: '2.025'
+      name: 'release snapshot'
+      version: '2.029'
     -
       class: Dist::Zilla::Plugin::Git::Tag
       config:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: '1.69'
+          tag: '1.70'
           tag_format: '%v%t'
           tag_message: v%v%t
           time_zone: local
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: Git::Tag
-      version: '2.025'
+      version: '2.029'
     -
-      class: Dist::Zilla::Plugin::GitHub::Update
-      name: GitHub::Update
-      version: '0.38'
+      class: Dist::Zilla::Plugin::BumpVersionAfterRelease
+      name: BumpVersionAfterRelease
+      version: '0.008'
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      config:
+        Dist::Zilla::Plugin::Git::Commit:
+          add_files_in:
+            - .
+          commit_msg: 'After release: bump $VERSION and timestamp Changes'
+          time_zone: local
+        Dist::Zilla::Role::Git::DirtyFiles:
+          allow_dirty:
+            - Changes
+          allow_dirty_match:
+            - (?^u:^lib)
+          changelog: Changes
+        Dist::Zilla::Role::Git::Repo:
+          repo_root: .
+      name: 'bumped $VERSION after release'
+      version: '2.029'
     -
       class: Dist::Zilla::Plugin::Git::Push
       config:
@@ -365,48 +383,48 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: Git::Push
-      version: '2.025'
+      version: '2.029'
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: ConfirmRelease
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':IncModules'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':MainModule'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':AllFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':NoFiles'
-      version: '5.025'
+      version: '5.029'
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
       is_trial: '0'
-    version: '5.025'
+    version: '5.029'
 x_authority: cpan:P5P
 x_contributors:
   - 'Karen Etheridge <ether@cpan.org>'
